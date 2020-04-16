@@ -1,0 +1,14 @@
+{% block media_list_widget %}
+
+    {% if 'sonata.media.provider.image' == value.providerName %}
+        <a href="{% path value, 'reference' %}" class="glightbox">
+            {% thumbnail value, 'small' with {'class': 'img rounded img-raised'} %}
+        </a>
+        <br/>
+    {% endif %}
+
+    <a href="{{ path('admin_sonata_media_media_edit', {'id': value.id}) }}">
+        {{ value.name }}
+    </a>
+
+{% endblock %}

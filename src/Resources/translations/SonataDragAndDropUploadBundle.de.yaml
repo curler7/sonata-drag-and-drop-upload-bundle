@@ -1,0 +1,13 @@
+title: Drag And Drop Upload
+open_filebrowser: Dateimanager öffnen
+status: Status
+waiting: Warten
+uploading: Hochladen
+canceled: Abgebrochen
+upload_complete: Abgeschlossen
+drag_and_drop: Dateien hier ablegen
+file_type_error: Dateityp wird nicht unterstützt
+file_size_error: Datei ist zu groß
+file_extension_error: Dateiending wird nicht unterstützt
+confirm_leaving_page: Upload abgeschlossen.\n Möchten Sie die Seite neu laden?
+info_reload_page: Die Seite wird neu geladen.

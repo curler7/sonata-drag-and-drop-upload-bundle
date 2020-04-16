@@ -1,0 +1,19 @@
+services:
+    sonata.media.admin.media:
+        class: SmartMedia\SonataDragAndDropUploadBundle\Admin\MediaAdmin
+        arguments: [~, ~, SmartMedia\SonataDragAndDropUploadBundle\Controller\DragAndDropUploadController, '@sonata.media.pool']
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: dashboard.label_media, label_translator_strategy: 'sonata.admin.label.strategy.underscore' }
+
+
+    sonata.media.admin.gallery:
+        class: SmartMedia\SonataDragAndDropUploadBundle\Admin\GalleryAdmin
+        arguments: [~, ~, ~, '@sonata.media.pool']
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: dashboard.label_gallery, label_translator_strategy: 'sonata.admin.label.strategy.underscore' }
+
+    sonata.media.admin.gallery_has_media:
+        class: SmartMedia\SonataDragAndDropUploadBundle\Admin\GalleryHasMediaAdmin
+        arguments: [~, ~, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: dashboard.label_gallery_has_media, label_translator_strategy: 'sonata.admin.label.strategy.underscore' }

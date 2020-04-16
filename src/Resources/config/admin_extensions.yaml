@@ -1,0 +1,16 @@
+services:
+    smart_media.sonata_drag_and_drop_upload.admin.extension.drag_and_drop_upload:
+        class: SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\DragAndDropUploadAdminExtension
+        tags:
+            - { name: sonata.admin.extension, target: sonata.media.admin.media }
+
+    smart_media.sonata_drag_and_drop_upload.admin.extension.gallery:
+        class: SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\GalleryAdminExtension
+        calls:
+            - [setGalleryManager, ['@sonata.media.manager.gallery']]
+
+    SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\DragAndDropUploadAdminExtension:
+        alias: smart_media.sonata_drag_and_drop_upload.admin.extension.drag_and_drop_upload
+
+    SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\GalleryAdminExtension:
+        alias: smart_media.sonata_drag_and_drop_upload.admin.extension.gallery

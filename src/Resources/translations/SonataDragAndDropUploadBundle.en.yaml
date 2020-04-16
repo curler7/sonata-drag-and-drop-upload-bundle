@@ -1,0 +1,13 @@
+title: Drag And Drop Upload
+open_filebrowser: Open in file browser
+status: Status
+waiting: Waiting
+uploading: Uploading
+canceled: Canceled
+upload_complete: Upload complete
+drag_and_drop: Drag & drop files here
+file_type_error: Filetype is not correct
+file_size_error: File is too large
+file_extension_error: File extension is not supported
+confirm_leaving_page: Upload completed.\n Do you want to reload the page?
+info_reload_page: The page is reloaded.

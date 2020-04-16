@@ -1,0 +1,13 @@
+title: Drag And Drop Upload
+open_filebrowser: "Ouvrir dans l'explorateur de fichier"
+status: Statut
+waiting: En attente
+uploading: "En cours d'envoi"
+canceled: Annulé
+upload_complete: Transfert terminé
+drag_and_drop: Glisser-déposer des fichiers ici
+file_type_error: "Le type de fichier n'est pas correct"
+file_size_error: Le fichier est trop lourd
+file_extension_error: "Cette extension de fichier n'est pas supportée"
+confirm_leaving_page: "Téléchargement terminé.\n Voulez-vous recharger la page?"
+info_reload_page: "Tous les fichiers ont été téléchargés avec succès. La page est rechargée."
