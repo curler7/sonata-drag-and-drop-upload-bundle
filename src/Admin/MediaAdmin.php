@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\Admin;
+namespace Curler\SonataDragAndDropUploadBundle\Admin;
 
 use Sonata\MediaBundle\Admin\ORM\MediaAdmin as BaseMediaAdmin;
 

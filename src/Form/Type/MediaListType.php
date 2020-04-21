@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\Form\Type;
+namespace Curler\SonataDragAndDropUploadBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 

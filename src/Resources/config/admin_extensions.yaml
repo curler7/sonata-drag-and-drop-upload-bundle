@@ -1,16 +1,16 @@
 services:
-    smart_media.sonata_drag_and_drop_upload.admin.extension.drag_and_drop_upload:
-        class: SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\DragAndDropUploadAdminExtension
+    curler.sonata_drag_and_drop_upload.admin.extension.drag_and_drop_upload:
+        class: Curler\SonataDragAndDropUploadBundle\Admin\Extension\DragAndDropUploadAdminExtension
         tags:
             - { name: sonata.admin.extension, target: sonata.media.admin.media }
 
-    smart_media.sonata_drag_and_drop_upload.admin.extension.gallery:
-        class: SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\GalleryAdminExtension
+    curler.sonata_drag_and_drop_upload.admin.extension.gallery:
+        class: Curler\SonataDragAndDropUploadBundle\Admin\Extension\GalleryAdminExtension
         calls:
             - [setGalleryManager, ['@sonata.media.manager.gallery']]
 
-    SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\DragAndDropUploadAdminExtension:
-        alias: smart_media.sonata_drag_and_drop_upload.admin.extension.drag_and_drop_upload
+    Curler\SonataDragAndDropUploadBundle\Admin\Extension\DragAndDropUploadAdminExtension:
+        alias: curler.sonata_drag_and_drop_upload.admin.extension.drag_and_drop_upload
 
-    SmartMedia\SonataDragAndDropUploadBundle\Admin\Extension\GalleryAdminExtension:
-        alias: smart_media.sonata_drag_and_drop_upload.admin.extension.gallery
+    Curler\SonataDragAndDropUploadBundle\Admin\Extension\GalleryAdminExtension:
+        alias: curler.sonata_drag_and_drop_upload.admin.extension.gallery

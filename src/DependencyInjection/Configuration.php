@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\DependencyInjection;
+namespace Curler\SonataDragAndDropUploadBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -13,7 +13,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('smart_media_sonata_drag_and_drop_upload');
+        $treeBuilder = new TreeBuilder('curler_sonata_drag_and_drop_upload');
         $node = $treeBuilder->getRootNode();
 
         $node

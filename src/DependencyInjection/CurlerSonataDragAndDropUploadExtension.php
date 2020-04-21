@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\DependencyInjection;
+namespace Curler\SonataDragAndDropUploadBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 
-class SmartMediaSonataDragAndDropUploadExtension extends Extension
+class CurlerSonataDragAndDropUploadExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -34,7 +34,7 @@ class SmartMediaSonataDragAndDropUploadExtension extends Extension
         $container->getDefinition('sonata.media.admin.gallery_has_media')
             ->replaceArgument(1, $config['class']['gallery_has_media']);
 
-        $container->getDefinition('smart_media.sonata_drag_and_drop_upload.controller.drag_and_drop_upload')
+        $container->getDefinition('curler.sonata_drag_and_drop_upload.controller.drag_and_drop_upload')
             ->setArgument(2, $config['class']['gallery_has_media']);
     }
 }

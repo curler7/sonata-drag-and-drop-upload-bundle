@@ -1,8 +1,7 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\Form\Type;
+namespace Curler\SonataDragAndDropUploadBundle\Form\Type;
 
-use App\Application\Sonata\MediaBundle\Entity\Media;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -50,11 +49,13 @@ class DragAndDropUploadType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setRequired('association');
+        $resolver->setRequired([
+            'data_class',
+            'association'
+        ]);
 
         $resolver->setDefaults([
             'required' => false,
-            'data_class' => Media::class,
             'provider' => 'sonata.media.provider.image',
             'context' => 'default',
             'controller_action' => 'admin_sonata_media_media_drag_and_drop_upload',

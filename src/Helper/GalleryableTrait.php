@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\Helper;
+namespace Curler\SonataDragAndDropUploadBundle\Helper;
 
 use Sonata\MediaBundle\Model\GalleryInterface;
 

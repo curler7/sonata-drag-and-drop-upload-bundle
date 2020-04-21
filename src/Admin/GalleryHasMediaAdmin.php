@@ -1,8 +1,8 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\Admin;
+namespace Curler\SonataDragAndDropUploadBundle\Admin;
 
-use SmartMedia\SonataDragAndDropUploadBundle\Form\Type\MediaListType;
+use Curler\SonataDragAndDropUploadBundle\Form\Type\MediaListType;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\MediaBundle\Admin\GalleryHasMediaAdmin as BaseGalleryHasMediaAdmin;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;

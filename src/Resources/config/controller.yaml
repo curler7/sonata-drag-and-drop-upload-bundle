@@ -1,6 +1,6 @@
 services:
-    smart_media.sonata_drag_and_drop_upload.controller.drag_and_drop_upload:
-        class: SmartMedia\SonataDragAndDropUploadBundle\Controller\DragAndDropUploadController
+    curler.sonata_drag_and_drop_upload.controller.drag_and_drop_upload:
+        class: Curler\SonataDragAndDropUploadBundle\Controller\DragAndDropUploadController
         arguments:
             - '@sonata.media.manager.media'
             - '@sonata.media.manager.gallery'
@@ -8,6 +8,6 @@ services:
         tags: ['controller.service_arguments']
 
 
-    SmartMedia\SonataDragAndDropUploadBundle\Controller\DragAndDropUploadController:
-        alias: smart_media.sonata_drag_and_drop_upload.controller.drag_and_drop_upload
+    Curler\SonataDragAndDropUploadBundle\Controller\DragAndDropUploadController:
+        alias: curler.sonata_drag_and_drop_upload.controller.drag_and_drop_upload
         public: true

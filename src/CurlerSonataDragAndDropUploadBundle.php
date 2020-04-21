@@ -1,13 +1,13 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle;
+namespace Curler\SonataDragAndDropUploadBundle;
 
-use SmartMedia\SonataDragAndDropUploadBundle\DependencyInjection\Compiler\DragAndDropUploadCompilerPass;
+use Curler\SonataDragAndDropUploadBundle\DependencyInjection\Compiler\DragAndDropUploadCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 
-class SmartMediaSonataDragAndDropUploadBundle extends Bundle
+class CurlerSonataDragAndDropUploadBundle extends Bundle
 {
     /**
      * {@inheritDoc}

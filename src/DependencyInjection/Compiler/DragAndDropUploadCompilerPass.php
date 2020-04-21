@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartMedia\SonataDragAndDropUploadBundle\DependencyInjection\Compiler;
+namespace Curler\SonataDragAndDropUploadBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class DragAndDropUploadCompilerPass implements CompilerPassInterface
 {
-    const SERVICE_ID = 'smart_media.sonata_drag_and_drop_upload.admin.extension.gallery';
+    const SERVICE_ID = 'curler.sonata_drag_and_drop_upload.admin.extension.gallery';
 
 
     /**
