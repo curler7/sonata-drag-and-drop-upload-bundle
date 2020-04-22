@@ -12,11 +12,7 @@ matrix:
     fast_finish: true
     include:
         - stage: test
-          php: 7.1
-        - stage: test
           php: 7.2
-        - stage: test
-          php: 7.3
 
 env:
     global:
