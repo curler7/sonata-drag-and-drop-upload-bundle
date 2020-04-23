@@ -19,12 +19,6 @@ class DragAndDropUploadType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('context', HiddenType::class, [
-                'data' => $options['context']
-            ])
-            ->add('providerName', HiddenType::class, [
-                'data' => $options['provider']
-            ])
             ->add('binaryContent', FileType::class, [
                 'attr' => [
                     'multiple' => true
@@ -42,6 +36,7 @@ class DragAndDropUploadType extends AbstractType
         $view->vars['association'] = $options['association'];
         $view->vars['refresh'] = $options['refresh'];
         $view->vars['max_file_size'] = $options['max_file_size'];
+        $view->vars['context'] = $options['context'];
     }
 
     /**

@@ -29,7 +29,7 @@
             console.log(window);
             let cancelRedirect = false;
             $('div.{{ form.vars.id }}').dmUploader({
-                url: '{{ path(form.vars.controller_action, {'provider': form.vars.provider, 'association': form.vars.association.id})|raw }}',
+                url: '{{ path(form.vars.controller_action, {'provider': form.vars.provider, 'context': form.vars.context, 'association': form.vars.association.id})|raw }}',
                 maxFileSize: {{ form.vars.max_file_size }},
                 {% if provider.allowedExtensions is defined %}
                 extFilter: {{ provider.allowedExtensions|json_encode|raw }},
