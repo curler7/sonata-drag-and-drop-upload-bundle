@@ -25,15 +25,6 @@ class CurlerSonataDragAndDropUploadExtension extends Extension
         $loader->load('admin.yaml');
         $loader->load('admin_extensions.yaml');
 
-        $container->getDefinition('sonata.media.admin.media')
-            ->replaceArgument(1, $config['class']['media']);
-
-        $container->getDefinition('sonata.media.admin.gallery')
-            ->replaceArgument(1, $config['class']['gallery']);
-
-        $container->getDefinition('sonata.media.admin.gallery_has_media')
-            ->replaceArgument(1, $config['class']['gallery_has_media']);
-
         $container->getDefinition('curler.sonata_drag_and_drop_upload.controller.drag_and_drop_upload')
             ->setArgument(2, $config['class']['gallery_has_media']);
     }
