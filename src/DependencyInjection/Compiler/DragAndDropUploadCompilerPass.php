@@ -16,13 +16,15 @@ class DragAndDropUploadCompilerPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
+        $galleries = [];
         foreach ($container->findTaggedServiceIds('sonata.admin') as $id => $attributes) {
             foreach ($attributes as $attribute) {
                 if (($attribute['drag_and_drop_upload'] ?? false) !== false) {
                     $container->getDefinition(self::SERVICE_ID)->addTag('sonata.admin.extension', ['target' => $id]);
-                    $container->getDefinition(self::SERVICE_ID)->setArgument(0, $attribute['drag_and_drop_upload']);
+                    $galleries[$id] = $attribute['drag_and_drop_upload'] === true ? 'gallery' : $attribute['drag_and_drop_upload'];
                 }
             }
         }
+        $container->getDefinition(self::SERVICE_ID)->addArgument($galleries);
     }
 }

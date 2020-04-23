@@ -21,11 +21,11 @@ class GalleryAdminExtension extends AbstractAdminExtension
 
 
     /**
-     * @param $tag
+     * @param array $galleries
      */
-    public function __construct($tag = true)
+    public function __construct(array $galleries)
     {
-        $this->galleries = is_string($tag) ? explode(',', $tag) : ['gallery'];
+        $this->galleries = $galleries;
     }
 
     /**
@@ -33,7 +33,7 @@ class GalleryAdminExtension extends AbstractAdminExtension
      */
     public function prePersist(AdminInterface $admin, $object)
     {
-        foreach ($this->galleries as $item) {
+        foreach (explode(',', $this->galleries[$admin->getCode()]) as $item) {
             $gallery = $this->galleryManager->create();
             $gallery->setName('Gallery');
             $gallery->setEnabled(true);
